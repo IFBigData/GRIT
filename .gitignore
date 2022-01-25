@@ -1,0 +1,8 @@
+*.npy
+*.pth
+*.pyc
+*.xml
+*.iml
+.idea/*
+*.log
+*.csv

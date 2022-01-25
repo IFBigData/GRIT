@@ -1,0 +1,2 @@
+# Swin Transformer
+CUDA_VISIBLE_DEVICES=2,3,4,5,6,7 python -m torch.distributed.run --standalone --nnodes=1 --nproc_per_node=6 --master_port 8730 main_ddp.py --lr=1e-4 --lr_finetune=1e-5 --output_dir=Transformer_output/swin_transformer --enc_layers=3 --dec_layers=3 --epochs=10 --batch_size=16 --hidden_dim=256 --img_size=224 --manualSeed=-1 --dropout=0.2 --dataset=pisc_fine --backbone=swin_transformer
